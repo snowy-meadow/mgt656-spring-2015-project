@@ -108,7 +108,7 @@ function rsvp (request, response){
 
 function api(request, response){
   var output = {events: events.all};
-  response.send(output);
+  response.json(output);
   
 }
 
