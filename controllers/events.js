@@ -106,11 +106,12 @@ function rsvp (request, response){
 
 }
 
-function api(request, response){
+function api (request, response){
   var output = {events: events.all};
   response.send(output);
   
 }
+
 
 /**
  * Export all our functions (controllers in this case, because they
