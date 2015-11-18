@@ -54,7 +54,7 @@ function checkIntRange(request, fieldName, minVal, maxVal, contextData){
   if (validator.isInt(request.body[fieldName]) === false) {
     contextData.errors.push('Your' + fieldName + 'should be an integer.');
   } else{
-    value = parseInt(reqeust.body[fieldName], 10);
+    value = parseInt(request.body[fieldName], 10);
     if (value > maxVal || value < minVal)
     {
       contextData.errors.push('Your' + fieldName + 'should be in the range ' + minVal + '-' + maxVal);
