@@ -22,6 +22,7 @@ var allowedDateInfo = {
     10: 'November',
     11: 'December'
   },
+  
   minutes: [0, 30],
   hours: [
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
@@ -70,15 +71,18 @@ function checkIntRange(request, fieldName, minVal, maxVal, contextData){
 function saveEvent(request, response){
   var contextData = {errors: []};
 
-  if (validator.isLength(request.body.title, 5,100) === false) {
-    contextData.errors.push('Your title should be between 5 and 100 letters.');
+  if (validator.isLength(request.body.title, 1, 49) === false) {
+    contextData.errors.push('Your title should be between 0 and 50 letters.');
   }
-
+  
+  if (validator.isLength(request.body.location, 1, 49) === false) {
+    contextData.errors.push('Your location should be between 0 and 50 letters.');
+  }
+  
 var year = checkIntRange(request, 'year', 2015, 2016, contextData);
 var month = checkIntRange(request, 'month', 0, 11, contextData);
 var day = checkIntRange(request, 'day', 1, 31, contextData);
 var hour = checkIntRange(request, 'hour', 0, 23, contextData);
-
 
   if (contextData.errors.length === 0) {
     var newEvent = {
