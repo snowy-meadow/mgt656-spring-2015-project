@@ -49,7 +49,7 @@ function newEvent(request, response){
   response.render('create-event.html', contextData);
 }
 
-function CheckIntRange(request, fieldName, minVal, maxVal, contextData){
+function checkIntRange(request, fieldName, minVal, maxVal, contextData){
   var value = null;
   if (validator.isInt(request.body[fieldName]) === false) {
     contextData.errors.push('Your' + fieldName + 'should be an integer.');
