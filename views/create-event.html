@@ -14,21 +14,32 @@
   {% endif %}
 
 	<form id="create-event" method="POST">
+	    <div class="form-group">
     <label for="title">Event title:</label>
     <input type="text" name="title">
+    </div>
     
+    <div class="form-group">
      <label for="location">Event location:</label>
     <input type="text" name="location">
+    </div>
     
+    <div class="form-group">
+        
      <label for="image">Event image:</label>
     <input type="text" name="image">
+    </div>
+    
+    <div class="form-group">
     
      <label for="year">Event year:</label>
     <select ="select" name="year">
     <option value=2015>2015</option>
     <option value=2016>2016</option>
     </select>
-    
+     </div>
+     
+    <div class="form-group">
     <label for="month">Event month:</label>
     <select ="select" name="month">
     <option value=0>January</option>
@@ -44,7 +55,9 @@
     <option value=10>November</option>
     <option value=11>December</option>
     </select>
+    </div>
     
+    <div class="form-group">
      <label for="day">Event day:</label>
      <select ="select" name="day">
     <option value=0>Monday</option>
@@ -56,6 +69,7 @@
     <option value=6>Sunday</option>
     </select>
     
+    <div class="form-group">
      <label for="hour">Event hour:</label>
       <select ="select" name="hour">
     <option value=0>0</option>
@@ -83,14 +97,18 @@
     <option value=22>22</option>
     <option value=23>23</option>
     </select>
+    </div>
     
+    <div class="form-group">
      <label for="minute">Event minute:</label>
      <select ="select" name="minute">
     <option value=0>0</option>
     <option value=30>30</option>
     </select>
     <!--title, location, image, year, month, day, hour, and minute.-->
+    </div>
     
+    <input type="submit" name="submit">
   </form>
   
 {% endblock %}

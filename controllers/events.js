@@ -68,6 +68,7 @@ if (validator.isInt(request.body.year, 5, 50) === false) {
 
   if (contextData.errors.length === 0) {
     var newEvent = {
+      id: events.getMaxId() + 1,
       title: request.body.title,
       location: request.body.location,
       image: request.body.image,
