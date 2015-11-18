@@ -13,6 +13,20 @@
 <img src="{{event.image}}" id="image">
 
   <p>Please join us!</p>
-
+  {% if errors %}
+  <div>
+      <ul class="form-errors">
+          {% for error in errors %}
+          <li>{{error}}</li>
+          {% endfor %}
+      </ul>
+      
+  </div>
+  
+{% endif %}
+    <form method="Post">
+    <input type="text" name="email" id="email" placeholder="Your email"/>
+    <input type="submit" value="Submit"/>
+</form>
 
 {% endblock %}
