@@ -55,8 +55,9 @@ function checkIntRange(request, fieldName, minVal, maxVal, contextData){
     contextData.errors.push('Your' + fieldName + 'should be an integer.');
   } else{
     value = parseInt(reqeust.body[fieldName], 10);
-    if (value > maxVal || value < minVal){
-      contextData.errors.push('Your' fieldName + 'should be in the range ' + minVal + '-' + maxVal);
+    if (value > maxVal || value < minVal)
+    {
+      contextData.errors.push('Your' + fieldName + 'should be in the range ' + minVal + '-' + maxVal);
     }
   }
   return value;
@@ -74,6 +75,10 @@ function saveEvent(request, response){
   }
 
 var year = checkIntRange(request, 'year', 2015, 2016, contextData);
+var month = checkIntRange(request, 'month', 0, 11, contextData);
+var day = checkIntRange(request, 'day', 1, 31, contextData);
+var hour = checkIntRange(request, 'hour', 0, 23, contextData);
+
 
   if (contextData.errors.length === 0) {
     var newEvent = {
@@ -143,5 +148,6 @@ module.exports = {
   'newEvent': newEvent,
   'saveEvent': saveEvent,
   'rsvp': rsvp,
-  'api': api
+  'api': api,
+  'checkIntRange': checkIntRange
 };
