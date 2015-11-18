@@ -53,12 +53,12 @@ function newEvent(request, response){
 function checkIntRange(request, fieldName, minVal, maxVal, contextData){
   var value = null;
   if (validator.isInt(request.body[fieldName]) === false) {
-    contextData.errors.push('Your' + fieldName + 'should be an integer.');
+    contextData.errors.push('Your' + fieldName + ' should be an integer.');
   } else{
     value = parseInt(request.body[fieldName], 10);
     if (value > maxVal || value < minVal)
     {
-      contextData.errors.push('Your' + fieldName + 'should be in the range ' + minVal + '-' + maxVal);
+      contextData.errors.push('Your' + fieldName + ' should be in the range ' + minVal + '-' + maxVal);
     }
   }
   return value;
@@ -77,6 +77,14 @@ function saveEvent(request, response){
   
   if (validator.isLength(request.body.location, 1, 49) === false) {
     contextData.errors.push('Your location should be between 0 and 50 letters.');
+  }
+  
+  if (validator.isURL(request.body.image) === false){
+    contextData.errors.push('Your image should be a URL');
+  }
+  
+   if (validator.matches(request.body.image,/\.(png|gif)$/) === false){
+    contextData.errors.push('Your image should be .png or .img.');
   }
   
 var year = checkIntRange(request, 'year', 2015, 2016, contextData);
