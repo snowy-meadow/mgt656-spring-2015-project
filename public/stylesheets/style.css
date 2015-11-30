@@ -1,18 +1,19 @@
 body {
+  background-color: yellow;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: yellow;
 }
 
 .form-errors {
 	color: red;
 }
 footer{
-  background-color: #eee;
+  background-color: white;
   padding: 1em;
-  border: 1px solid #add;
+  border: 1px solid black;
   margin: 2em 0;
 }
