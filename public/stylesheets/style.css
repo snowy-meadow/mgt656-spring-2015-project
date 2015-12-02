@@ -15,6 +15,13 @@ a {
 .form-errors {
 	color: blue;
 }
+
+.event-creation{
+  background-color: white;
+  padding: 1em;
+  border: 1px solid black;
+  margin: 2em 0;
+}
 footer{
   background-color: white;
   padding: 1em;
