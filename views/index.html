@@ -14,13 +14,24 @@
   <p>
     <img style = "opacity:0.5;border:2px solid black;" id ="logo" src=http://images.performgroup.com/di/library/sporting_news/ed/8/yale-handsome-dan-082615_u5f8s74cxc6s17vcrbt44835n.png?t=1775426647&h=600"  height = 300px>
   </p>
-  <h2 style=text-align:center;">Here is our list of events</h2>
-    <div style="border: 1px solid black">{% include "fragments/events-list.html" %}</div>
+  <h2 style=text-align:left;">Here is our list of events</h2>
+  
+    <div style="border: 1px solid black; 
+    background-color: white;
+    
+  width:500px;
+  height:30px;
+
+  ">{% include "fragments/events-list.html" %}</div>
  
-  <p>
+  <div class="event-selection">
+    <p>
     Check out the <a href="/about">About us</a> page
     as well as the <a href="/events">Events</a> page.
-  </p>
+    </p>
+  </div>
+  
+  
   <div class="event-creation">
    <p>
     <a id="new" href="/events/new">Create a new event</a>

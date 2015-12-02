@@ -17,12 +17,36 @@ a {
 }
 
 .event-creation{
+  width:175px;
+  height:30px;
   background-color: white;
-  padding: 1em;
+  padding: .25em;
   border: 1px solid black;
   margin: 2em 0;
 }
+
+.event-selection{
+  width:500px;
+  height:30px;
+  background-color: white;
+  padding: .25em;
+  border: 1px solid black;
+  margin: 2em 0;
+}
+
+.tripp{
+  text-align:center;
+  width:500px;
+  height:400px;
+  background-color: white;
+  padding: .25em;
+  border: 1px solid black;
+  margin: 2em 0;
+}
+
 footer{
+  width:175px;
+  height:40px;
   background-color: white;
   padding: 1em;
   border: 1px solid black;
