@@ -481,7 +481,7 @@ describe('The form for creating new events',function(){
       assert.ok(formErrors, 'Error page should contain form errors.');
       var errorListItems = formErrors.getElementsByTagName('li');
      assert.ok(errorListItems, 'Expected form errors.');
-   assert(errorListItems.length > 0, 'Expected form errors.');
+     assert(errorListItems.length > 0, 'Expected form errors.');
         done();
       });
     });
