@@ -47,6 +47,17 @@ a {
   opacity: .8;
 }
 
+.aboutdiv1{
+  text-align:center;
+  width:500px;
+  height:250px;
+  background-color: black;
+  padding: .25em;
+  border: 1px solid black;
+  margin: 2em 0;
+  opacity: .9;
+}
+
 .biodiv{
   text-align:left;
   width:250px;
@@ -55,6 +66,16 @@ a {
   margin: 2em 0;
   float: right;
   opacity:.6;
+}
+
+.biodiv1{
+  text-align:left;
+  width:250px;
+  height:100px;
+  background-color: black;
+  margin: 2em 0;
+  float: right;
+  opacity:.9;
 }
 
 footer{
