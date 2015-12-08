@@ -30,7 +30,8 @@
 </form>
 <p></p>
  <div class="event-creation">
-<a href="/donation">Donate!</a>
+  
+<a class="donation" href="/donation">Donate!</a>
 </div>
 
 <!-- Load the Content Experiment JavaScript API client for the experiment -->
@@ -44,37 +45,8 @@
 var pageVariations = [
   function() {},  // Original: Do nothing. This will render the default HTML.
   function() {    // Variation 1: 
- <h1 id="title">{{event.title}}</h1>
-<p>When: <span id="date">{{event.date}}</span></p>
-<p>Where: <span id="location">{{event.location}}</span></p>
-<p>Who:</p>
-<ul id="attendees">
-    {% for person in event.attending %}
-    <li>{{person}}</li>
-    {% endfor %}
-</ul>
-<img src="{{event.image}}" id="image">
+$("a.donation").html('Support')
 
-  <p>Please join us!</p>
-  {% if errors %}
-  <div>
-      <ul class="form-errors">
-          {% for error in errors %}
-          <li>{{error}}</li>
-          {% endfor %}
-      </ul>
-      
-  </div>
-  
-{% endif %}
-    <form method="Post">
-    <input type="text" name="email" id="email" placeholder="Your email"/>
-    <input type="submit" value="Submit"/>
-</form>
-<p></p>
- <div class="event-creation">
-<a href="/donation">Support!</a>
-</div>
   }
 ];
 
@@ -92,19 +64,4 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-71173659-1', 'auto');
-  ga('send', 'pageview');
-</script>
 {% endblock %}
