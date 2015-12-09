@@ -29,8 +29,8 @@
     <input type="submit" value="Submit"/>
 </form>
 <p></p>
+
  <div class="event-creation">
-  
 <a class="donation" href="/donation">Donate!</a>
 </div>
 
@@ -46,7 +46,6 @@ var pageVariations = [
   function() {},  // Original: Do nothing. This will render the default HTML.
   function() {    // Variation 1: 
 $("a.donation").html('Support')
-
   }
 ];
 
@@ -60,8 +59,5 @@ $(document).ready(function(){
 }
 );
 </script>
-
-
-
 
 {% endblock %}
