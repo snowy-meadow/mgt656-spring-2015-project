@@ -6,6 +6,9 @@
       {{event.attending.length}} attending so far.
     </li>
   {% endfor %}
+
+</ul>
+
   <!-- Load the Content Experiment JavaScript API client for the experiment -->
 <script src="//www.google-analytics.com/cx/api.js?experiment=B8tWyCrTQ86VNXbSNUTW1Q"></script>
 
@@ -17,7 +20,7 @@
 var pageVariations = [
   function() {},  // Original: Do nothing. This will render the default HTML.
   function() {    // Variation 1: add RSVP text
-    $( 'li.event-title' ).prepend( 'RSVP ' );
+    $( 'event' ).prepend( 'RSVP ' );
   }
 ];
 
@@ -31,5 +34,3 @@ $(document).ready(function(){
 }
 );
 </script>
-</ul>
-
